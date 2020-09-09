@@ -27,7 +27,7 @@
         - [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
     - [Figma](https://www.figma.com/)
         - Free, web-based UX design tool
-    - [Adobe XD](https://www.adobe.com/products/xd.html?sdid=12B9F15S&mv=Search&ef_id=CjwKCAjwkdL6BRAREiwA-kiczGlKOD6-DASI9BUGIwQBgdAt33vydE4YxCgvMX5TDh2T5m9Trjq-jBoCFugQAvD_BwE:G:s&s_kwcid=AL!3085!3!315233774139!e!!g!!adobe%20xd!1641846436!65452675151)
+    - [Adobe XD](https://www.adobe.com/products/xd.html)
         - More sophisticated UX tool (One Free Project)
     - [Visual Studio Code](https://code.visualstudio.com/)
         - Great text editor for full stack development
