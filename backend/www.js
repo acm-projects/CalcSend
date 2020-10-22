@@ -4,8 +4,8 @@
  * Module dependencies.
  */
 
-var app = require('./app');
-var debug = require('debug')('calcsend:server');
+var app = require('../../node_express_test/app');
+var debug = require('debug')('node-express-test:server');
 var http = require('http');
 
 /**
