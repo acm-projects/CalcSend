@@ -11,7 +11,7 @@ const corsOptions = {
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
-const APIRoute = require('../API/apitest');
+const APIRoute = require('../api/server');
 //
 const app = express();
 //
