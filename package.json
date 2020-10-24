@@ -1,0 +1,20 @@
+{
+  "name": "CalcSend",
+  "version": "1.0.0",
+  "description": "> CalcSend is a website that contains hundreds of commonly used equations in educational settings, whether it is trig sub or finding the wavelength of a transverse wave. Compute expert-level answers to complex calculations instantly, and contribute custom formulas to an academic community.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acm-projects/CalcSend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acm-projects/CalcSend/issues"
+  },
+  "homepage": "https://github.com/acm-projects/CalcSend#readme"
+}
