@@ -53,28 +53,37 @@ router.get('/solver/', cors(co), async (req, res) => {
         }
 
         original = JSONdata.queryresult.pod
-            .filter(a => a.$.id === "Input")[0].subpod[0].plaintext[0];
+            // get the plaintext input query from the pod that contains the input query information
+            .filter(a => a.$.id === "Input")[0]
+            .subpod[0].plaintext[0];
 
         alternates = JSONdata.queryresult.pod
+            //get the list of alternate forms from the pod that contains the alternate form information
             .filter(b => b.$.id === "AlternateForm")[0].subpod
             .map(c => c.plaintext[0]);
 
         steps = JSONdata.queryresult.pod
+            // find subpods that can contain solution information
             .filter(d => d.$.id.includes("Solution"))
             .map(e => e.subpod)
+            // get all the plaintexts in the subpods that contain intermediate steps
             .map(f => f
                 .filter(g => g.$.title === "Possible intermediate steps")
                 .map(l => l.plaintext))
+            // combines all nested arrays into one array of steps
             .reduce((acc, o) => acc.concat(o))
             .map(p => p[0]);
 
 
         solutions = JSONdata.queryresult.pod
+            // find subpods that can contain solution information
             .filter(h => h.$.id.includes("Solution"))
             .map(i => i.subpod)
+            // get all the plaintexts in the subpods that contain solutions
             .map(j => j
                 .filter(k => k.$.title !== "Possible intermediate steps")
                 .map(l => l.plaintext))
+            // combine all nested arrays of solutions into one array of solutions
             .reduce((acc, m) => acc.concat(m))
             .reduce((acc, n) => acc.concat(n));
 
