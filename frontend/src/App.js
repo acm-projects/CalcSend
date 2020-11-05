@@ -20,6 +20,8 @@ function App() {
         <img src={SidePageLogo} alt="ERROR" className="side-logo"/>
       </div>
     </div>
+    
+    
   );
 }
 
