@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './UserComment.css'
-import temp1 from './profilePictures/template-account-photopng.png';
-import temp2 from './profilePictures/temp2.jpg';
-import temp3 from './profilePictures/Megamind.png';
-import temp4 from './profilePictures/drake.jpg';
+import temp1 from './profilePictures/sanjeev-account-image.jpg';
+import temp2 from './profilePictures/ruthvik-account-image.jpg';
+import temp3 from './profilePictures/aeron-account-image.jpg';
+import temp4 from './profilePictures/abigail-account-image.png';
 
 class UserComment extends Component{
     
@@ -15,13 +15,13 @@ class UserComment extends Component{
                    
                     <div className="text">
                         <div className="header">
-                            The Quadratic Formula, a Theory or Reality???
+                            The History of the Quadratic Formula
                         </div>
                         
                         <div className="content">
-                            Okay, so let's act like this is a real comment and we're going off on the quadratic formula 
-                            (your choice if for or against, but she mad whichever way). We rollin' with our commment. We've 
-                            got a lot to say. Man, the quadratic formula...
+                            We all remember high school. We all also remember having to memorize the quadratic formula, but 
+                            do you remember where the quadratic formula came from? I've been looking into this and I found some 
+                            pretty interesting things about how the quadratic formula came to be...
                         </div>
                     </div>
                 </div>
@@ -31,12 +31,13 @@ class UserComment extends Component{
                    
                     <div className="text">
                         <div className="header">
-                            Proper Use of Megamind Formula
+                            Best way to teach integrals, Opinion Piece
                         </div>
                         
                         <div className="content">
-                            Okay, so let's pretend again that this is a real post. Have you guys seen "Megamind"? It's 
-                            interesting, not a favorite, but for some reason that's hovering over my thoughts... Send help?
+                            I've been talking with other students and came to a startling realization about integrals: we had 
+                            no clue what we were doing. Turns out integrals are paramount, so I've been wondering what makes the 
+                            most sense to everyone else? I've heard some people...
                         </div>
                     </div>
                 </div>
@@ -46,12 +47,13 @@ class UserComment extends Component{
                    
                     <div className="text">
                         <div className="header">
-                           Wow, this site is amazing!
+                           Permutations versus combinations
                         </div>
                         
                         <div className="content">
-                            Math math math! Math? Math. MA-MA-MA-Math! We really love math here. Don't play. Math.
-                            Guess what? Math.
+                            Does anyone have any idea how to keep the permutation and combination formulas clearly different when 
+                            studying the two? I've played around with putting different numbers into both -- I've worked through 
+                            textbook problems, but I still...
                         </div>
                     </div>
                 </div>
@@ -61,11 +63,13 @@ class UserComment extends Component{
                    
                     <div className="text">
                         <div className="header">
-                        Lorem ipsum dolor sit amet, consectetur...
+                        An Overview of Strong induction
                         </div>
                         
                         <div className="content">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget consequat enim, vitae lobortis magna. Fusce eu sodales metus. Fusce placerat, eros ut sagittis rhoncus, urna ex dictum eros, at gravida urna purus in lorem. Morbi a euismod felis. Nulla faucibus odio eget ipsum eleifend, nec iaculis nisl placerat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed pulvinar justo purus, et commodo turpis ultrices ac.
+                        To prove that P(n) is true for all integers n, where P(n) is a propositional function, 
+                        we need to verify that P(1) is true and then show that the conditional statement [P(1) 
+                        ^ P(2) ^ P(3) ^ ... ^ P(k)] towards P(k+1) is true for all positive...
                         </div>
                     </div>
                 </div>
