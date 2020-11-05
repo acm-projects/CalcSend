@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import React from 'react';
+import Navbar from "./components/Navbar/Navbar";
+import Calculator from './components/Calculator/Calculator';
+import Forum from './components/Forum/Forum';
 import './App.css';
+import './components/SearchBar/AutoCompleteText';
+import SidePageLogo from './images/side-page-logo.png';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <div className="test">
+        <p className="calculator-title">Enter your problem...</p>
+        <Calculator/>
+      </div>
+      
+      <div className="middle-page">
+        <Forum className="Forum"/>
+        <img src={SidePageLogo} alt="ERROR" className="side-logo"/>
+      </div>
     </div>
   );
 }

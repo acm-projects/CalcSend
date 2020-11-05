@@ -1,0 +1,43 @@
+.forum-space{
+    height: 800px;
+    width: 950px;
+    margin: 100px;
+    padding-left: 15px;
+    border-left: 5px inset #1C6EA4;
+}
+
+.profile-picture{
+    height: 50px;
+    width: 50px;
+    border-radius: 90px;
+}
+
+.account-img{
+    
+}
+
+.forum-title{
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 25px;
+    letter-spacing: 2.4px;
+    word-spacing: 2px;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+}
+
+.forum-description{
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 20px;
+    letter-spacing: 2.2px;
+    word-spacing: 1px;
+    color: #000000;
+    font-weight: 300;
+    text-decoration: none;
+    font-style: normal;
+    text-transform: none;
+    margin-bottom: 5px;
+}

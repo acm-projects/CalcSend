@@ -1,0 +1,27 @@
+button{
+    background: #f8d49b; 
+    color: #335769;
+    padding: 5px 10px 5px 10px;
+    border: 4px outset rgba(28, 110, 164, 0.53);
+    border-radius: 11px;
+}
+
+button:hover{
+    background: #f8e6cb;
+    border: 4px inset rgba(28,110,164,0.53);
+    border-radius: 11px;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(6, auto); /*3 vs other values*/
+    grid-gap: 5px;
+    text-align: center;
+    padding: 15px;
+    border: 5px outset rgba(81,147,179,0.5);
+    border-radius: 11px;
+}
+
+.button-image{
+    height: 15px;
+}

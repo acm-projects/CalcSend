@@ -1,0 +1,16 @@
+.add-post-button{
+    margin: 10px;
+    padding: 10px 15px 10px 15px;
+    font-size: 15px;
+    font-weight: 800;
+    transition: all 0.1s ease-in-out;
+}
+
+.add-post-button:hover{
+    transform: scale(1.02);
+    font-size: 17px;
+}
+
+i{
+    margin: 0px 10px 0px 0px;
+}

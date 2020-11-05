@@ -1,0 +1,37 @@
+.AutoCompleteText{
+    width: 100%;
+    border: 1px solid grey;
+    border-radius: 0px;
+    box-shadow: 2px 1px 4px 4px rgba(14,14,15,0.73);
+}
+
+.AutoCompleteText input{
+    width: 100%;
+    border: none;
+}
+
+.nav-search{
+    color: #010203;
+    background-color: #fff5e7;
+    border-radius: 0px;
+    font-size: 20px;
+    
+}
+
+.filtered-list-items{
+    background-color:white;
+    color: grey;
+    display: grid;
+    grid-template-columns: repeat(1, 10px);
+    grid-auto-rows: minmax(10px, auto);
+    grid-gap: 4px;
+}
+
+.filtered-list-items:hover{
+    color: black;
+    box-shadow: 1px 1px blue;
+}
+
+.filtered-list{
+    background: grey;
+}
