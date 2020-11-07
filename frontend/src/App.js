@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from "./components/Navbar/Navbar";
 import Calculator from './components/Calculator/Calculator';
 import Forum from './components/Forum/Forum';
+import OutputWindow from './components/Calculator/OutputWindow';
 import './App.css';
 import './components/SearchBar/AutoCompleteText';
 import SidePageLogo from './images/side-page-logo.png';
@@ -20,8 +21,6 @@ function App() {
         <img src={SidePageLogo} alt="ERROR" className="side-logo"/>
       </div>
     </div>
-    
-    
   );
 }
 

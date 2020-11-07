@@ -25,3 +25,7 @@ button:hover{
 .button-image{
     height: 15px;
 }
+
+.calc-button{
+    height: 45px;
+}

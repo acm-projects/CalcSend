@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import  ResultScreen  from "./ResultScreen";
 import  KeyPadComponent  from "./KeyPadComponent";
 import './Calculator.css'
+import OutputWindow from './OutputWindow';
 
 
 
@@ -11,7 +12,21 @@ class Calculator extends Component{
         super();
 
         this.state = {
-            result: ""
+            result: "",
+            name: "React",
+            showOutputWindow: false
+        };
+        this.hideComponent = this.hideComponent.bind(this);
+    }
+
+    hideComponent(name){
+        console.log(name);
+        switch(name){
+            case "showOutputWindow":
+                this.setState({ showOutputWindow: !this.state.showOutputWindow });
+                break;
+            default:
+                break;
         }
     }
 
@@ -54,10 +69,13 @@ class Calculator extends Component{
     };
 
     render(){
+        const { showOutputWindow } = this.state;
         return(
             <div className="calculator-body">
                 <ResultScreen result={this.state.result}/>
                 <KeyPadComponent onClick={this.onClick}/>
+                { showOutputWindow && <OutputWindow />}
+                <button onClick={() => this.hideComponent("showOutputWindow")}>See steps...</button>
             </div>
         )
     }
