@@ -1,0 +1,19 @@
+.footer-container{
+    background: linear-gradient(90deg, #5193b3 0%, #5f9fbe 100%);
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    font-size:1.2 rem;
+    display: grid;
+    grid-template-columns: repeat(3, auto); /*3 vs other values*/
+    grid-gap: 10px;
+    text-align: left;
+}
+
+.contact-container{
+    font-size:1.2 rem;
+    display: grid;
+    grid-template-columns: repeat(3, auto); /*3 vs other values*/
+    grid-gap: 10px;
+    text-align: left;
+}
