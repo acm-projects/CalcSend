@@ -64,6 +64,7 @@
     color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
+    font-size: 15px;
 }
 
 .nav-links:hover{
