@@ -14,6 +14,7 @@
 .header:hover{
     color: #3e6e86;
     text-decoration: underline solid #3e6e86;
+    cursor: pointer;
 }
 .content{
     font-family: Tahoma, Geneva, sans-serif;
@@ -59,4 +60,5 @@
 
 .user-img:hover{
     transform: scale(1.05);
+    cursor: pointer;
 }

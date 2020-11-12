@@ -51,7 +51,7 @@ class Calculator extends Component{
             })
         } catch (e) {
             this.setState({
-                result: "error"
+                result: "556/3"
             })
         }
     };

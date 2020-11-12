@@ -1,15 +1,17 @@
 button{
     background: #f8d49b; 
-    color: #335769;
+    color: #122027;
     padding: 5px 10px 5px 10px;
     border: 4px outset rgba(28, 110, 164, 0.53);
     border-radius: 11px;
+    font-weight: 700;
 }
 
 button:hover{
     background: #f8e6cb;
     border: 4px inset rgba(28,110,164,0.53);
     border-radius: 11px;
+    cursor: pointer;
 }
 
 .buttons{
@@ -28,4 +30,13 @@ button:hover{
 
 .calc-button{
     height: 45px;
+}
+
+.calc-button-decimal{
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 15px;
+    color: #000000;
+    font-weight: 700;
+    font-style: normal;
+    font-variant: normal;
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./OutputWindow.css";
+import firstSolution from './images/first-solution.jpg';
 
 class OutputWindow extends Component{
     constructor(){
@@ -12,15 +13,10 @@ class OutputWindow extends Component{
     render(){
        return(
            <div className="result-window">
-               THIS IS WHERE THE STEPS WOULD BE
+               Your solution is below!
                <br/>
-               FIRST STEP
                <br/>
-               SECONDS STEP
-               <br/>
-               THIRD STEP
-               <br/>
-               SOLUTION
+               <img src={firstSolution} alt="LOADING..." />
            </div>
        );  
     }

@@ -9,6 +9,7 @@
 .add-post-button:hover{
     transform: scale(1.02);
     font-size: 17px;
+    cursor: pointer;
 }
 
 i{
