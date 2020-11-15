@@ -15,7 +15,7 @@ const encodeEquation = (equation_string) => {
 
 
 const getURL = (formatted_equation) =>
-    `http://api.wolframalpha.com/v2/query?appid=P7J79U-H8RJQUPL7H&input=${formatted_equation}&podstate=Step-by-step%20solution&format=plaintext`;
+    `http://api.wolframalpha.com/v2/query?appid=P7J79U-H8RJQUPL7H&input=${formatted_equation}&podstate=Step-by-step%20solution&podstate=Exact%20forms&podstate=Exact%20form&format=plaintext&output=json`;
 
 
 module.exports.encodeEquation = encodeEquation;
