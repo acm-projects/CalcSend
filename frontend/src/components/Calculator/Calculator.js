@@ -3,7 +3,7 @@ import  ResultScreen  from "./ResultScreen";
 import  KeyPadComponent  from "./KeyPadComponent";
 import './Calculator.css'
 import OutputWindow from './OutputWindow';
-
+import { encodeEquation } from '../../helpers/encoder';
 
 
 class Calculator extends Component{
@@ -14,7 +14,9 @@ class Calculator extends Component{
         this.state = {
             result: "",
             name: "React",
-            showOutputWindow: false
+            showOutputWindow: false,
+            solved: false,
+            returnJson: {}
         };
         this.hideComponent = this.hideComponent.bind(this);
     }
@@ -23,7 +25,9 @@ class Calculator extends Component{
         console.log(name);
         switch(name){
             case "showOutputWindow":
-                this.setState({ showOutputWindow: !this.state.showOutputWindow });
+                this.setState(prevState => ({ 
+                    showOutputWindow: !prevState.showOutputWindow 
+                }))
                 break;
             default:
                 break;
@@ -38,27 +42,30 @@ class Calculator extends Component{
         } else if(button === "CE"){
             this.backspace()
         } else {
-            this.setState({
-                result: this.state.result + button
-            })
+            this.setState(prevState => ({
+                result: prevState.result + button
+            }))
         }
     };
     
     calculate = () => {
-        try{
-            this.setState({
-                result: (eval(this.state.result) || "") + ""
-            })
-        } catch (e) {
-            this.setState({
-                result: "556/3"
-            })
-        }
+        // Future Fetch call coming here
+        const url = `http://localhost:3001/api/solver/?equation=${this.state.result}` // Cameron, how do we do this???
+        this.setState({
+            solved: true,
+            returnJson: {
+                original: "original equation maybe????",
+                steps: ["first step", "second step", "third step", "fourth step"],
+                solutions: ["the solution is here"],
+            }
+        })
     };
 
     reset = () => {
         this.setState({
-            result: ""
+            result: "",
+            showOutputWindow: false,
+            solved: false
         })
     };
 
@@ -74,8 +81,21 @@ class Calculator extends Component{
             <div className="calculator-body">
                 <ResultScreen result={this.state.result}/>
                 <KeyPadComponent onClick={this.onClick}/>
-                { showOutputWindow && <OutputWindow />}
-                <button onClick={() => this.hideComponent("showOutputWindow")}>See steps...</button>
+
+            { 
+                this.state.solved
+                
+                ?  
+                    <>
+                        <OutputWindow outputSteps={this.state.returnJson.steps} show={showOutputWindow}/>
+                            <button onClick={() => this.hideComponent("showOutputWindow")}>
+                                {this.state.showOutputWindow ? "Hide steps" : "See steps..."}
+                            </button>
+                    </>  
+                : 
+                    null
+            }
+
             </div>
         )
     }

@@ -11,14 +11,16 @@ class OutputWindow extends Component{
     }
     
     render(){
+       if (this.props.show) {
        return(
            <div className="result-window">
                Your solution is below!
                <br/>
                <br/>
-               <img src={firstSolution} alt="LOADING..." />
+               <img src={firstSolution} alt="LOADING..." style={{maxWidth: '80vw'}} />
            </div>
-       );  
+       )
+       } else return null  
     }
 }
 

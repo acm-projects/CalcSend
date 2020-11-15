@@ -11,10 +11,10 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <div className="test">
+      {/* <div className="test"> */}
         <p className="calculator-title">Enter your problem...</p>
         <Calculator/>
-      </div>
+      {/* </div> */}
       
       <div className="middle-page">
         <Forum className="Forum"/>

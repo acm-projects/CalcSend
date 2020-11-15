@@ -1,9 +1,9 @@
 .calculator-body{
     background: white;
-    width: 1850px;
+    width: 80vw;
     height: auto;
-    padding:15px 20px 15px 400px;
-    margin: 0px;
+    /* padding:15px 20px 15px 400px; */
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(1, auto); /*3 vs other values*/
     grid-gap: 10px;
