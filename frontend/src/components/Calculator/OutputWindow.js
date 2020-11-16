@@ -17,7 +17,7 @@ class OutputWindow extends Component{
                Your solution is below!
                <br/>
                <br/>
-               <img src={firstSolution} alt="LOADING..." style={{maxWidth: '80vw'}} />
+               <img src={this.props.outputSteps} alt="LOADING..." style={{maxWidth: '80vw'}} />
            </div>
        )
        } else return null  

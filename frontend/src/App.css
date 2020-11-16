@@ -64,7 +64,7 @@
 
 .middle-page{
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(2, auto);
   grid-gap: 30px;
 
 }
@@ -78,3 +78,4 @@
       transform: rotateY(360deg);
   }
 }
+

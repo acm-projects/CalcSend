@@ -50,15 +50,21 @@ class Calculator extends Component{
     
     calculate = () => {
         // Future Fetch call coming here
-        const url = `http://localhost:3001/api/solver/?equation=${this.state.result}` // Cameron, how do we do this???
-        this.setState({
-            solved: true,
-            returnJson: {
-                original: "original equation maybe????",
-                steps: ["first step", "second step", "third step", "fourth step"],
-                solutions: ["the solution is here"],
-            }
-        })
+        // const url = `http://localhost:3001/api/solver/?equation=${this.state.result}` // Cameron, how do we do this???
+        fetch(`http://api.wolframalpha.com/v2/query?appid=RPVQ5Q-AYY7U2JV73&input=${this.state.result}&podstate=Step-by-step%20solution&podstate=Exact%20forms&podstate=Exact%20form&format=image&output=json`)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                this.setState({
+                    solved: true,
+                    returnJson: {
+                        original: data.queryresult.pods[0].subpods[0].img.src,
+                        steps: data.queryresult.pods[1].subpods[0].img.src,
+                        solutions: "the solution is here",
+                    }
+                })
+            })
+            .catch(err => console.log(err))
     };
 
     reset = () => {

@@ -65,7 +65,7 @@ class KeyPadComponent extends Component{
                 
                 <button className="calc-button" name="|" onClick={e => this.props.onClick(e.target.name)}>abs|x|</button>
 
-                <button className="calc-button" name="modulus(" onClick={e => this.props.onClick(e.target.name)}>mod</button>
+                <button className="calc-button-decimal" name="=" onClick={e => this.props.onClick(e.target.name)}>=</button>
                 
                 <button className="calc-button" name="+" onClick={e => this.props.onClick(e.target.name)}><i class="fas fa-plus"></i></button>
                 <button className="calc-button" name="-" onClick={e => this.props.onClick(e.target.name)}><i class="fas fa-minus"></i></button>
