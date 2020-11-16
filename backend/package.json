@@ -19,9 +19,11 @@
     "node-fetch": "^2.6.1",
     "request": "^2.88.2",
     "request-promise": "^4.2.6",
+    "win-node-env": "^0.4.0",
     "xml2js": "^0.4.23"
   },
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "nodemon": "^2.0.4",
     "pug": "^2.0.0-beta11"
   }

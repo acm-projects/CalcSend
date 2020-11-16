@@ -1,7 +1,8 @@
-const express = require('express');
-const cors = require('cors');
+const path = '../backend/node_modules/'
+const express = require(path + 'express');
+const cors = require(path + 'cors');
 const router = express.Router();
-const request = require('request-promise');
+const request = require(path + 'request-promise');
 const { encodeEquation, getURL } = require('./formatter.js');
 const { getOriginal, getSolution, getSteps } = require('./parser.js')
 const co = {
@@ -46,6 +47,10 @@ router.get('/solver/', cors(co), async (req, res) => {
         original = getOriginal(data);
         solutions = getSolution(data);
         steps = getSteps(data);
+
+        if (original === "") {
+            original = decodeEquation(equation);
+        }
 
         res.json({
             original: original,
