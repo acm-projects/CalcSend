@@ -22,7 +22,8 @@
 }
 
 .calculator-title{
-  margin: 25px 0px 0px 400px;
+  /* margin: 25px 0px 0px 400px; */
+  padding: 3%;
   font-family: "Lucida Console", Monaco, monospace;
   font-size: 35px;
   letter-spacing: 1px;
@@ -56,16 +57,17 @@
 }
 
 .side-logo{
-  height: 700px;
-  width: 700px;
-  margin-top: 80px;
+  /* height: 50%; */
+  width: 30vw;
+  margin: auto;
+  /* display: block; */
   animation: spin 15s linear infinite;
 }
 
 .middle-page{
   display: grid;
   grid-template-columns: repeat(2, auto);
-  grid-gap: 30px;
+  grid-gap: 10%;
 
 }
 

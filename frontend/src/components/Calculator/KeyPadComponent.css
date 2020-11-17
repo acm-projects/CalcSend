@@ -25,18 +25,25 @@ button:hover{
 }
 
 .button-image{
-    height: 15px;
+    height: 90%;
 }
 
 .calc-button{
     height: 45px;
+    font-weight: 700;
+    font-size: 1em;
 }
 
 .calc-button-decimal{
     font-family: "Arial Black", Gadget, sans-serif;
-    font-size: 15px;
+    font-size: 1em;
     color: #000000;
     font-weight: 700;
     font-style: normal;
     font-variant: normal;
+}
+
+#bottom-button{
+    grid-column-start: 1;
+    grid-column-end: 7;
 }

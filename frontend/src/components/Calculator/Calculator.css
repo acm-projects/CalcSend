@@ -1,7 +1,8 @@
 .calculator-body{
     background: white;
     /* width: 80vw; */
-    max-width: 80%;
+    width: 80%;
+    max-width: 900px;
     height: auto;
     /* padding:15px 20px 15px 400px; */
     margin: auto;

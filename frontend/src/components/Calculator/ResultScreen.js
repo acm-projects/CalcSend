@@ -11,11 +11,22 @@ class ResultScreen extends Component{
 
     render(){
        let {result} = this.props;
-       return(
-           <div className="result-window">
-               <p className="result">{result}</p>
-           </div>
-       );  
+
+    //    if (this.props.outputImg) {
+           return (
+
+    //             <div className="result-window">
+    //                 <img className="result" src={this.props.outputImg}/>
+    //             </div>
+    //        )
+    //    } else {
+
+    //        return(
+               <div className="result-window">
+                   <p className="result">{result}</p>
+               </div>
+           )
+    //    }
     }
 }
 

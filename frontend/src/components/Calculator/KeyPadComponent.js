@@ -39,15 +39,15 @@ class KeyPadComponent extends Component{
                 <button className="calc-button"  name="8" onClick={e => this.props.onClick(e.target.name)}>8</button>
                 <button className="calc-button"  name="9" onClick={e => this.props.onClick(e.target.name)}>9</button>
                 
-                <button className="calc-button"  name="&#8508;" onClick={e => this.props.onClick(e.target.name)}><img src={pi} className="button-image"/></button>
-                <button className="calc-button"  name="&#101;" onClick={e => this.props.onClick(e.target.name)}>e</button>
+                <button className="calc-button"  name="pi" onClick={e => this.props.onClick(e.target.name)}><img src={pi} className="button-image"/></button>
+                <button className="calc-button"  name="e" onClick={e => this.props.onClick(e.target.name)}>e</button>
                 <button className="calc-button" name="x" onClick={e => this.props.onClick(e.target.name)}>x</button>
 
                 <button className="calc-button"  name="4" onClick={e => this.props.onClick(e.target.name)}>4</button>
                 <button className="calc-button"  name="5" onClick={e => this.props.onClick(e.target.name)}>5</button>
                 <button className="calc-button"  name="6" onClick={e => this.props.onClick(e.target.name)}>6</button>
                 
-                <button className="calc-button" name="d/dx(" onClick={e => this.props.onClick(e.target.name)}>y'</button>
+                <button className="calc-button" name="derivative(" onClick={e => this.props.onClick(e.target.name)}>y'</button>
                 <button className="calc-button" name="&#8747;((" onClick={e => this.props.onClick(e.target.name)}><img src={integralSign} className="button-image"/></button>
                 <button className="calc-button" name="limit(x->" onClick={e => this.props.onClick(e.target.name)}>limit</button>
 
@@ -61,6 +61,7 @@ class KeyPadComponent extends Component{
                 <button className="calc-button" name="log(" onClick={e => this.props.onClick(e.target.name)}>log</button>
                 
                 <button className="calc-button-decimal" name="^(" onClick={e => this.props.onClick(e.target.name)}>^</button>
+                <button className="calc-button" name="0" onClick={e => this.props.onClick(e.target.name)}>0</button>
                 <button className="calc-button" name="&#8730;(" onClick={e => this.props.onClick(e.target.name)}><i class="fas fa-square-root-alt"></i></button>
                 
                 <button className="calc-button" name="|" onClick={e => this.props.onClick(e.target.name)}>abs|x|</button>
@@ -68,19 +69,20 @@ class KeyPadComponent extends Component{
                 <button className="calc-button-decimal" name="=" onClick={e => this.props.onClick(e.target.name)}>=</button>
                 
                 <button className="calc-button" name="+" onClick={e => this.props.onClick(e.target.name)}><i class="fas fa-plus"></i></button>
-                <button className="calc-button" name="-" onClick={e => this.props.onClick(e.target.name)}><i class="fas fa-minus"></i></button>
+                <button className="calc-button-decimal" name="-" onClick={e => this.props.onClick(e.target.name)}>-</button>
                 <button className="calc-button" name="*" onClick={e => this.props.onClick(e.target.name)}>*</button>
                 <button className="calc-button" name="/" onClick={e => this.props.onClick(e.target.name)}><i class="fas fa-divide"></i></button>
                 
-                <button className="calc-button" name="CE" onClick={e => this.props.onClick(e.target.name)}>BACKSPACE</button>
+                
                 <button className="calc-button" name="(" onClick={e => this.props.onClick(e.target.name)}>(</button>
                 <button className="calc-button" name=")" onClick={e => this.props.onClick(e.target.name)}>)</button>
                 <button className="calc-button-decimal" name="." onClick={e => this.props.onClick(e.target.name)}>.</button>
                 <button className="calc-button-decimal"  name="," onClick={e => this.props.onClick(e.target.name)}>,</button>
 
                 <button className="calc-button" name="C" onClick={e => this.props.onClick(e.target.name)}>CLEAR</button>
+                <button className="calc-button" name="CE" onClick={e => this.props.onClick(e.target.name)}>BACK</button>
                 
-                <button className="calc-button" name="ENTER" onClick={e => this.props.onClick(e.target.name)}>ENTER</button>
+                <button className="calc-button" id="bottom-button" name="ENTER" onClick={e => this.props.onClick(e.target.name)}>ENTER</button>
             </div>
         );
     }

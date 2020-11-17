@@ -1,7 +1,7 @@
 .forum-space{
-    height: 800px;
-    width: 950px;
-    margin: 100px;
+    /* height: 800px; */
+    /* width: 950px; */
+    margin: 10%;
     padding-left: 15px;
     border-left: 5px inset #1C6EA4;
 }
@@ -10,10 +10,6 @@
     height: 50px;
     width: 50px;
     border-radius: 90px;
-}
-
-.account-img{
-    
 }
 
 .forum-title{

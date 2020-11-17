@@ -4,6 +4,7 @@ import './Navbar.css'
 import {Button} from "../Button"
 import AutoCompeleteText from '../SearchBar/AutoCompleteText';
 import '../SearchBar/AutoCompleteText';
+import Logo from '../../images/side-page-logo.png';
 
 class Navbar extends Component {
 state = { clicked: false}
@@ -15,7 +16,10 @@ state = { clicked: false}
     render(){
         return(
             <nav className="NavbarItems">
-                <h1 className="navbar-logo">CalcSend<i className="fas fa-calculator"></i></h1>
+                <div className="navbar-logo">
+                    <img src={ Logo } id="calcsend-logo" alt="CalcSend Logo"/>
+                </div>
+                
                 <AutoCompeleteText className="nav-searchbar"/>
                 <div className="menu-icon" onClick={this.handleClick}>
                     <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>

@@ -6,7 +6,7 @@ import NewPost from './NewPost';
 class Forum extends Component{
     render(){
         return(
-            <div className="forum-space">
+            <div className="forum-space" style={{width:'80%'}}>
                 <div className="forum-identity">
                     <div className="forum-title">
                         FORUM

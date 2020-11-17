@@ -13,10 +13,13 @@ class Calculator extends Component{
 
         this.state = {
             result: "",
-            name: "React",
             showOutputWindow: false,
             solved: false,
-            returnJson: {}
+            returnJson: {
+                original: null,
+                steps: null,
+                solution: null
+            }
         };
         this.hideComponent = this.hideComponent.bind(this);
     }
@@ -51,16 +54,24 @@ class Calculator extends Component{
     calculate = () => {
         // Future Fetch call coming here
         // const url = `http://localhost:3001/api/solver/?equation=${this.state.result}` // Cameron, how do we do this???
-        fetch(`http://api.wolframalpha.com/v2/query?appid=RPVQ5Q-AYY7U2JV73&input=${this.state.result}&podstate=Step-by-step%20solution&podstate=Exact%20forms&podstate=Exact%20form&format=image&output=json`)
+
+        let equation = encodeEquation(this.state.result)
+        fetch(`http://api.wolframalpha.com/v2/query?appid=RPVQ5Q-AYY7U2JV73&input=${equation}&podstate=Step-by-step%20solution&podstate=Exact%20forms&podstate=Exact%20form&format=image&output=json`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+                // debugger
+                let input = data.queryresult.pods.find(pod => pod.title === "Input" || pod.id === "Input").subpods[0].img.src
+                let solution = data.queryresult.pods.find(pod => pod.title === "Solutions" || pod.title === "Results").subpods[0].img.src
+                let result = data.queryresult.pods.find(pod => pod.title === "Solutions" || pod.title === "Results").subpods[0].img.title
+                let steps = data.queryresult.pods.find(pod => pod.title === "Solutions" || pod.title === "Results").subpods[1].img.src
                 this.setState({
                     solved: true,
+                    result: result,
                     returnJson: {
-                        original: data.queryresult.pods[0].subpods[0].img.src,
-                        steps: data.queryresult.pods[1].subpods[0].img.src,
-                        solutions: "the solution is here",
+                        original: input,
+                        steps: steps,
+                        solutions: solution,
                     }
                 })
             })
@@ -71,7 +82,12 @@ class Calculator extends Component{
         this.setState({
             result: "",
             showOutputWindow: false,
-            solved: false
+            solved: false,
+            returnJson: {
+                original: null,
+                steps: null,
+                solutions: null
+            }
         })
     };
 
@@ -85,7 +101,7 @@ class Calculator extends Component{
         const { showOutputWindow } = this.state;
         return(
             <div className="calculator-body">
-                <ResultScreen result={this.state.result}/>
+                <ResultScreen result={this.state.result} outputImg={this.state.returnJson.original}/>
                 <KeyPadComponent onClick={this.onClick}/>
 
             { 

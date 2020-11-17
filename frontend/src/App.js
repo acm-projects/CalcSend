@@ -12,13 +12,19 @@ function App() {
     <div className="App">
       <Navbar />
       {/* <div className="test"> */}
+      <center>
         <p className="calculator-title">Enter your problem...</p>
+      </center> 
         <Calculator/>
       {/* </div> */}
       
       <div className="middle-page">
-        <Forum className="Forum"/>
-        <img src={SidePageLogo} alt="ERROR" className="side-logo"/>
+        {/* <div style={{width: '70vw'}}> */}
+            <Forum className="Forum"/>
+        {/* </div> */}
+        <div style={{width:'10%', display: 'flex', justifyContent: 'center'}}>
+            <img src={SidePageLogo} alt="ERROR" className="side-logo"/>
+        </div>
       </div>
 
       <FooterContent />
